@@ -1,0 +1,51 @@
+Step-by-Step Plan for Tic-Tac-Toe
+1. Organize the Game's Key Components:
+Gameboard: This is where you’ll store the state of the game. You’ll need an array to represent a 3x3 grid. Each cell in the grid will either be empty or contain an 'X' or 'O'. The gameboard will track what happens in the game.
+
+Players: Players will each have a marker (either 'X' or 'O') and a name. There will be two players, and you will need to alternate turns between them.
+
+Game Flow: The game needs to alternate turns, check for a winner, check for a tie, and allow players to take turns. You’ll need a controller that manages how the game progresses.
+
+2. What Goes Where?
+Think about the roles of each object:
+
+Gameboard Object:
+
+This will hold the state of the game.
+It should handle the board setup (3x3 grid) and resetting the board when needed.
+Player Object:
+
+Each player will be an object with a name and a marker.
+The Player object will store each player’s unique marker ('X' or 'O').
+Game Flow Object:
+
+The Game object is responsible for managing the turn-taking.
+It will also check if someone wins or if the game ends in a tie.
+3. Plan the Game's Logic:
+Turn-based System:
+
+Players will take turns making moves.
+After each move, check if the current player has won. If not, move on to the next player.
+Check for a Winner:
+
+You’ll check all possible winning combinations on the board (rows, columns, diagonals).
+If a player has a complete line, they win.
+Check for a Tie:
+
+If the board is full and there’s no winner, it’s a tie.
+4. Displaying the Game (When Ready to Use the DOM):
+Once you have the game logic down in the console, you can move on to:
+
+Rendering the Board: This is where you’ll make the board visible on the webpage, so players can see the game state.
+
+Handling Player Interaction: You'll need to listen for clicks on the board and place the player's marker in the appropriate spot.
+
+Game Results: After each game, display who won or if it was a tie. Include an option to restart the game.
+
+5. Keep it Simple and Tidy:
+Keep the logic inside objects/factories to ensure that each part of the game is responsible for one thing and one thing only.
+Avoid using too many global variables; try to structure everything in objects (like the Gameboard, Player, and Game).
+Now, Focus on These:
+Think about the gameboard: How will the state of the board look at the beginning of the game? What happens after each move?
+Understand how players interact with the game: What happens when a player takes a turn? How does the game switch to the other player?
+Game flow management: How will the game check for a winner or tie? What needs to happen to end the game?
